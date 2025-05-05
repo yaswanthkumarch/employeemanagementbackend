@@ -25,11 +25,21 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
+
+
+
+
+
+
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.war'
+
+
+
 
   deploy:
     runs-on: windows-latest
